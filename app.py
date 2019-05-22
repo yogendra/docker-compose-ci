@@ -30,8 +30,8 @@ def hello():
     <h1>Hello World! </h1>
     <div>I have been seen <b>{count}</b> times</div>
     <body>
-    <html>
-'''.format(count=count)
+    <html>'''.format(count=count)
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
