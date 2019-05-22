@@ -1,14 +1,14 @@
 pipeline {
     agent any
     
+    checkout scm 
     stages {
-        stage ('Checkout'){
-               checkout scm 
-        }
         stage('Build') {
-            docker
-                .build("yogendra/test-web:latest")
-                .push()
+            steps{
+                docker
+                    .build("yogendra/test-web:latest")
+                    .push()
+            }
 
         }
         stage('Deploy') {
