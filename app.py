@@ -23,7 +23,15 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    return 'Hello World! I have been seen {} times.\n'.format(count)
+    # count = 0
+    return '''
+    <html>
+    <body>
+    <h1>Hello World! </h1>
+    <div>I have been seen <b>{}</b> times</div>
+    <body>
+    <html>
+'''.format(count)
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
