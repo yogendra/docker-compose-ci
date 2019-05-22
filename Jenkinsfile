@@ -13,8 +13,9 @@ pipeline {
             steps{
                 script {         
                     docker.withRegistry('', 'docker-hub-id'){           
-                        appimage = docker.build("yogendra/test-web:latest")
-                        appimage.push()                
+                        appimage = docker.build("yogendra/test-web:1.0.${env.BUILD_ID}")
+                        appimage.push()
+                        appimage.push("latest")
                     }
                 }
             }
