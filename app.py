@@ -23,7 +23,7 @@ def get_hit_count():
 @app.route('/')
 def hello():
     count = get_hit_count()
-    
+    print 'count={}'.formt(count)
     return '''
     <html>
     <body>
