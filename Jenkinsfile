@@ -3,5 +3,7 @@ node {
     sh "printenv" 
     sh "docker images" 
     sh "docker-compose help"
+
+    sh "docker-compose -p dctest up -d --force-recreate"
   }
 }
