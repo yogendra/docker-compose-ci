@@ -22,6 +22,7 @@ pipeline {
         stage('Deploy') {            
             steps {
                 withDockerServer([credentialsId: "ds-manager1", uri: "tcp://35.222.233.121:2376"]) {                         
+                    sh 'docker-compose pull web'
                     sh "docker-compose -p dctest up -d --build  --force-recreate"
                 }
             }
