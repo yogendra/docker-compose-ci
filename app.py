@@ -27,7 +27,7 @@ def hello():
     return '''
     <html>
     <body>
-    <h1>Hello World! </h1>
+    <h1>Hello World!</h1>
     <div>I have been seen <b>{count}</b> times</div>
     <body>
     <html>'''.format(count=count)
